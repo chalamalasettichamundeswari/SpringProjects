@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+     <bean name="address" class="com.springcore.springapp.SpringCoreAdvanced.autowired.Address" p:hno="101" p:street="mamilla" p:city="vijayawada" />       
+     <bean name="emp" class="com.springcore.springapp.SpringPrimitiveTypeSetterInjection.Employee" p:id="20" p:name="chamu" >
+        <context:annotation-config/>
+	<!-- 
+
+    
+    <bean 
+     class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
+
+    using spring interface
+    <bean name="emp" class="com.springcore.springapp.SpringPrimitiveTypeSetterInjection.Employee" p:id="20" p:name="chamu" init-method="afterPropertiesSet" destroy-method="destroy" >-->
+	<!-- 
+    using xml configuration 
+
+     <bean name="emp" class="com.springcore.springapp.SpringPrimitiveTypeSetterInjection.Employee" p:id="20" p:name="chamu" init-method="hi" destroy-method="bye" >
+    
+     Example for used as an element
+
+     <property name="id">
+        <value>20</value>
+     </property>
+
+      <property name="name">
+        <value>chamu</value>
+      </property>
+
+      Example for used as an attribute
+
+      <property name="id" value="23"/>
+
+      <property name="name" value="chamu"/>
+     -->
+
+
+	</bean>
+</beans>
