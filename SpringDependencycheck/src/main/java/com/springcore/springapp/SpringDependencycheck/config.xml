@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:ctx="http://www.springframework.org/schema/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p" xsi:schemaLocation="http://www.springframework.org/schema/beans 
+
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean name="prescription" class="com.springcore.springapp.SpringDependencycheck.Prescription" p:id="101" p:patientName="chamu">
+		<property name="medicines">
+			<list>
+				<value>dolo</value>
+				<value>glycomet</value>
+				<value>pain killer</value>
+			</list>
+		</property>
+	</bean>
+  <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+</beans>

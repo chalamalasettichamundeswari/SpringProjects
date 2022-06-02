@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:ctx="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:p="http://www.springframework.org/schema/p" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean name="hospital" class="com.springcore.springapp.SpringCollectionTypeSetterInjection.Hospital" p:name="chamundeswari">
+		<property name="doctors">
+			<!-- 
+         <list>
+<value>Front Office</value><value>In Patient</value><value>Out patient</value>
+            </list>
+        -->
+			<!-- If there is only one element get rid of set .Default one is LinkedHashset
+     <set>
+         <value>Front Office</value><value>In Patient</value><value>Out patient</value><value>In Patient</value><value>Out patient</value> <value>Front Office</value>
+       </set>
+		
+        -->
+       <map>
+        <entry key="1" value="ramprasad"></entry>
+        <entry key="2" value="raghu"></entry>
+       </map>
+		</property>
+         
+	</bean>
+</beans>

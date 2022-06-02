@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:ctx="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean name="address" class="com.springcore.springapp.SpringConstructorInjection.Address" p:hno="101" p:street="mamilla" p:city="vijayawada" />
+
+	<bean name="emp" class="com.springcore.springapp.SpringConstructorInjection.Employee" c:id="1" c:address-ref="address" c:name="chamundeswari">
+		<!--
+       Element
+       <constructor-arg>
+			<value>123</value>
+		</constructor-arg>
+        <constructor-arg>
+			<ref bean="address"/>
+		</constructor-arg>
+        <constructor-arg>
+			<value>chamundeswari</value>
+		</constructor-arg>
+       
+        Attibute
+//type,index,name -to solve ambiguity problem.
+        <constructor-arg value="60" type="int" index="0"(to make sure passing the arguments in the right order)(optional if we usee more than 1 constructor) />
+		<constructor-arg ref="address" />
+		<constructor-arg value="chamundeswari" />
+          -->
+		
+	</bean>
+</beans>
